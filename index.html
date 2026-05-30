@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Banner is now inside the body -->
+    <header>
+        <img src="banner.png" alt="Leia as frases em inglês e o reconhecimento de voz da Google vai te ajudar a praticar!" style="width: 100%; height: auto; display: block;">
+    </header>
+
+    <div class="container">
+     <div id="sentence-container">
+            <div id="target-sentence"></div>
+        </div>
+
+        <div id="output" class="output-box">Escutando, pode ler: ...</div>
+
+        <div class="controls">
+            <button id="start-btn">Comece a ler</button>
+            <button id="stop-btn" disabled>Terminei de ler</button>
+            <button id="read-btn">Leia pra mim</button>
+            <button id="next-btn" style="display:none;">Proxima Frase</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

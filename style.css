@@ -1,0 +1,161 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers items horizontally */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Limits the height on desktops */
+    object-fit: contain; /* Keeps the whole image visible without cropping */
+    display: block;
+    margin: 0 auto;
+}
+
+/* This targets screens larger than 768px (like computers) */
+@media (min-width: 768px) {
+    header img {
+        max-height: 250px; /* You can adjust this number to make it bigger or smaller */
+    }
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px;
+    margin-bottom: 40px; /* Space at the bottom of the page */
+}
+
+#target-sentence {
+    font-size: 1.8rem;
+    line-height: 2.5;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border-left: 5px solid #007bff;
+}
+
+.output-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+    min-height: 50px;
+    color: #495057;
+    font-style: italic;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+.word {
+    padding: 2px 6px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.correct {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.current {
+    color: #fd7e14;
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: #fff3cd;
+    padding: 5px 10px;
+}
+
+.wrong {
+    color: #dc3545;
+    animation: shake 0.4s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+#start-btn {
+    background: #007bff;
+    color: white;
+}
+
+#start-btn:hover {
+    background: #0056b3;
+}
+
+#stop-btn {
+    background: #6c757d;
+    color: white;
+}
+
+#stop-btn:hover {
+    background: #5a6268;
+}
+
+#read-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+#read-btn:hover {
+    background: #138496;
+}
+
+#next-btn {
+    background: #28a745;
+    color: white;
+}
+
+#next-btn:hover {
+    background: #218838;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
