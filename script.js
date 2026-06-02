@@ -26,7 +26,7 @@ function loadText(index) {
     currentWordIndex = 0;
     wordElements[0].classList.add('current');
     nextBtn.style.display = 'none';
-    output.innerText = "Escutando, pode ler: ...";
+    output.innerText = "Click READY TO READ and read ...";
 }
 
 startBtn.addEventListener('click', () => {
